@@ -59,6 +59,7 @@ artifacts/
 *.tlb
 *.tli
 *.tlh
+*.designer.cs
 *.tmp
 *.tmp_proj
 *.log
