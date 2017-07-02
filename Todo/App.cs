@@ -5,6 +5,7 @@ using System.Diagnostics;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using Microsoft.Azure.Mobile.Push;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Todo
@@ -44,7 +45,8 @@ namespace Todo
 		{
 			MobileCenter.Start("uwp=21242859-6c7c-41ce-babe-6228c4a892ba;android=8c4dc2a1-4536-4e4a-aeb4-7a86e121ea5b;ios=f467fb1e-f56f-4e99-a70b-127da06e639b;",
                                typeof(Analytics), 
-                               typeof(Crashes));
+                               typeof(Crashes),
+                               typeof(Push));
 
           	//Debug.WriteLine("OnStart");
 
