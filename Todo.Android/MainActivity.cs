@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Content.PM;
+using Microsoft.Azure.Mobile.Push;
 
 namespace Todo
 {
@@ -17,5 +18,11 @@ namespace Todo
 
 			LoadApplication(new App());
 		}
+
+        protected override void OnNewIntent(Android.Content.Intent intent)
+        {
+            base.OnNewIntent(intent);
+            Push.CheckLaunchedFromNotification(this, intent);
+        }
 	}
 }
