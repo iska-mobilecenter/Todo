@@ -16,7 +16,14 @@ namespace Todo
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
-			LoadApplication(new App());
+            Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
+                if (!string.IsNullOrWhiteSpace(e.View.AutomationId))
+                {
+                    e.NativeView.ContentDescription = e.View.AutomationId;
+                }
+            };
+
+            LoadApplication(new App());
 		}
 
         protected override void OnNewIntent(Android.Content.Intent intent)
