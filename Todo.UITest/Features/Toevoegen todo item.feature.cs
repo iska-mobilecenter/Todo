@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Todo.Android.UITest.Features
+namespace Todo.UITest.Features
 {
     using TechTalk.SpecFlow;
     

@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D932261B-5F0F-4AB6-9623-458844230A77}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Todo.Android.UITest</RootNamespace>
-    <AssemblyName>Todo.Android.UITest</AssemblyName>
+    <RootNamespace>Todo.UITest</RootNamespace>
+    <AssemblyName>Todo.UITest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
