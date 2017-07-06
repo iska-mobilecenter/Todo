@@ -19,7 +19,8 @@ namespace Todo
 			};
 			toolbarItem.Clicked += async (sender, e) =>
 			{
-				await Navigation.PushAsync(new TodoItemPageCS
+                Microsoft.Azure.Mobile.Analytics.Analytics.TrackEvent("Add button clicked");
+                await Navigation.PushAsync(new TodoItemPageCS
 				{
 					BindingContext = new TodoItem()
 				});
