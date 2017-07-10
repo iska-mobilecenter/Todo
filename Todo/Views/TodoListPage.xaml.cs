@@ -28,7 +28,12 @@ namespace Todo
 			});
 		}
 
-		async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void OnItemCrashed(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 			((App)App.Current).ResumeAtTodoId = (e.SelectedItem as TodoItem).ID;
 			Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as TodoItem).ID);

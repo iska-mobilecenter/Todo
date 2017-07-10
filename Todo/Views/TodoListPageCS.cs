@@ -17,7 +17,8 @@ namespace Todo
 				Text = "+",
 				Icon = Device.OnPlatform(null, "plus.png", "plus.png")
 			};
-			toolbarItem.Clicked += async (sender, e) =>
+
+            toolbarItem.Clicked += async (sender, e) =>
 			{
                 Microsoft.Azure.Mobile.Analytics.Analytics.TrackEvent("Add button clicked");
                 await Navigation.PushAsync(new TodoItemPageCS
@@ -25,7 +26,8 @@ namespace Todo
 					BindingContext = new TodoItem()
 				});
 			};
-			ToolbarItems.Add(toolbarItem);
+
+            ToolbarItems.Add(toolbarItem);
 
 			listView = new ListView
 			{
