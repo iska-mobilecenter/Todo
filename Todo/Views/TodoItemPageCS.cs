@@ -25,7 +25,7 @@ namespace Todo
 				await App.Database.SaveItemAsync(todoItem);
 
                 CustomProperties properties = new CustomProperties();
-                properties.Set("TodoItemName",todoItem.Name);
+                properties.Set("ItemName", todoItem.Name);
                 MobileCenter.SetCustomProperties(properties);
 
 				await Navigation.PopAsync();

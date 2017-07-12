@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Azure.Mobile;
 using Xamarin.Forms;
 
 namespace Todo
@@ -14,6 +15,11 @@ namespace Todo
 		{
 			var todoItem = (TodoItem)BindingContext;
 			await App.Database.SaveItemAsync(todoItem);
+
+			CustomProperties properties = new CustomProperties();
+            properties.Set("ItemName", todoItem.Name);
+         	MobileCenter.SetCustomProperties(properties);
+
 			await Navigation.PopAsync();
 		}
 
