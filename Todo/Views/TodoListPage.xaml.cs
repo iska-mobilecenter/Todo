@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Azure.Mobile.Push;
+using System;
 using System.Diagnostics;
 using Xamarin.Forms;
 
@@ -20,9 +21,10 @@ namespace Todo
 			listView.ItemsSource = await App.Database.GetItemsAsync();
 		}
 
-		async void OnItemAdded(object sender, EventArgs e)
+        async void OnItemAdded(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new TodoItemPage
+            Microsoft.Azure.Mobile.Analytics.Analytics.TrackEvent("Add button clicked");
+            await Navigation.PushAsync(new TodoItemPage
 			{
 				BindingContext = new TodoItem()
 			});

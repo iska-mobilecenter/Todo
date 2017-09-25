@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Azure.Mobile.Push;
+using System;
 using System.Diagnostics;
 using Xamarin.Forms;
 
@@ -73,7 +74,7 @@ namespace Todo
 			Content = listView;
 		}
 
-		protected override async void OnAppearing()
+        protected override async void OnAppearing()
 		{
 			base.OnAppearing();
 
